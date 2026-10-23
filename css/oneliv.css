@@ -1,0 +1,143 @@
+﻿.oneliv-banner p, .oneliv-banner a, .oneliv-banner div, .oneliv-banner .close-banner .text p {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    margin: 0;
+    text-decoration: none;
+}
+
+.oneliv-banner p, .oneliv-banner a, .oneliv-banner div {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.oneliv-banner .close-banner .text p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.oneliv-banner a:active {
+    text-decoration: none;
+}
+
+.color-secondary-400 {
+    color: #4F4FF7
+}
+
+.oneliv-banner .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oneliv-button-secondary {
+    text-align: center;
+    background: #4F4FF7;
+    border-radius: 6px;
+    border-style: none;
+    padding: 16px 24px;
+    color: #FFFFFF;
+}
+
+.oneliv-button-secondary:hover {
+    background: #7B7BF9;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.banner-fixed {
+    position: fixed;
+    bottom: 86px;
+    z-index: 2000;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 960px;
+}
+
+.oneliv-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background: #E7E7FE;
+    border-radius: 8px;
+    padding: 1rem
+}
+
+.oneliv-clickable {
+    display: flex;
+    flex-direction: row;
+}
+
+.oneliv-image {
+    width: 94px;
+}
+
+.oneliv-banner-text {
+    padding-left: 1.5rem;
+    padding-right: 3rem;
+}
+
+.oneliv-banner .logo{
+    padding-left: 1.5rem;
+}
+
+.oneliv-banner .close-banner{
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.oneliv-banner .close-banner .text{
+   display: none;
+}
+
+.oneliv-banner .close-banner .image{
+    display: flex;
+}
+
+@media screen and (max-width:1000px)  {
+    .oneliv-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .oneliv-clickable {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner-fixed {
+        min-width: 328px;
+        width: 50%;
+    }
+
+    #oneliv-banner-button .oneliv-button-secondary{
+        width: 280px;
+    }
+
+    .oneliv-image {
+        width: 150px;
+    }
+
+    .oneliv-banner-text, #oneliv-banner-button{
+        padding: 0 0 1rem 0;
+    }
+
+    .oneliv-banner .close-banner{
+        padding: 0;
+    }
+
+    .oneliv-banner .logo{
+        padding-left: 0;
+        padding-bottom: 1rem;
+    }
+    .oneliv-banner .close-banner .text{
+        display: flex;
+    }
+
+    .oneliv-banner .close-banner .image{
+        display: none;
+    }
+}

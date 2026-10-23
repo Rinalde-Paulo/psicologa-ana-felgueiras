@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ana Felgueiras - Psicóloga Clínica (CRP 05/75804) em Gestalt-terapia para adolescentes e adultos. Atendimento na Barra da Tijuca, RJ e Online.">
+    <meta name="author" content="Ana Felgueiras">
+    <title>Ana Felgueiras - Informações e Agendamento</title>
+
+    <!-- Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #FFFBEB;
+            --secundary-color: #E7E5E4;
+            --menu-color: #FFD8A8;
+            --menu-txt-color: #B45309;
+            --details-color: #F97316;
+            --title-txt-color: #92400E;
+            --paragraph-txt-color: #3A3A3A;
+            --card-bg: #FFFFFF;
+            --whatsapp-green: #25D366;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary-color);
+            color: var(--paragraph-txt-color);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- HEADER / NAVBAR --- */
+        .navbar-top {
+            background-color: var(--menu-color);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(180, 83, 9, 0.08);
+        }
+
+        .brand-btn {
+            background-color: var(--details-color);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(249, 115, 22, 0.3);
+        }
+
+        .brand-btn:hover {
+            background-color: #ea580c;
+            color: #ffffff;
+        }
+
+        .hamburger-btn {
+            background: none;
+            border: 1px solid rgba(180, 83, 9, 0.3);
+            border-radius: 6px;
+            padding: 8px 12px;
+            cursor: pointer;
+            color: var(--menu-txt-color);
+            font-size: 18px;
+        }
+
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--menu-color);
+            padding: 15px 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-menu.active {
+            display: block;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 10px 0;
+            color: var(--menu-txt-color);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(180, 83, 9, 0.15);
+        }
+
+        .nav-menu a:last-child {
+            border-bottom: none;
+        }
+
+        /* --- HERO / BIO SECTION --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 20px;
+        }
+
+        .hero-photo-wrapper {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .hero-photo {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(146, 64, 14, 0.12);
+            object-fit: cover;
+            display: inline-block;
+        }
+
+        .doctor-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .doctor-name {
+            color: var(--title-txt-color);
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .doctor-specialty {
+            color: var(--paragraph-txt-color);
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .doctor-subspecialty {
+            color: #78716C;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .welcome-title {
+            color: var(--title-txt-color);
+            font-size: 26px;
+            font-weight: 500;
+            margin-top: 10px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .bio-text {
+            font-size: 15px;
+            color: var(--paragraph-txt-color);
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        /* --- CONTENT SECTIONS --- */
+        .section-title {
+            color: var(--paragraph-txt-color);
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 32px;
+            margin-bottom: 14px;
+        }
+
+        .help-list {
+            list-style: none;
+            padding-left: 10px;
+            margin-bottom: 24px;
+        }
+
+        .help-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .help-list li::before {
+            content: "•";
+            color: var(--paragraph-txt-color);
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* --- SEPARATORS --- */
+        .accent-divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--details-color);
+            margin: 40px auto 16px;
+            border-radius: 2px;
+        }
+
+        .section-heading-center {
+            text-align: center;
+            color: var(--title-txt-color);
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        /* --- AGENDAMENTO SECTION --- */
+        .agendamento-section {
+            background-color: var(--secundary-color);
+            padding: 40px 20px;
+            margin-top: 40px;
+            border-radius: 16px;
+        }
+
+        .booking-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .booking-card-header {
+            display: flex;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .tab-item {
+            padding: 14px 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .tab-item.active {
+            color: var(--paragraph-txt-color);
+            border-right: 1px solid #E5E7EB;
+        }
+
+        .tab-item.link {
+            color: #2563EB;
+            margin-left: auto;
+        }
+
+        .booking-card-body {
+            padding: 24px;
+            font-size: 14px;
+        }
+
+        .booking-info-item {
+            margin-bottom: 14px;
+        }
+
+        .booking-info-label {
+            font-weight: 700;
+            color: #1F2937;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .booking-info-val {
+            color: #4B5563;
+        }
+
+        .form-group-custom {
+            margin-bottom: 18px;
+        }
+
+        .form-group-custom label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: #374151;
+        }
+
+        .form-control-custom {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 14px;
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            font-family: inherit;
+        }
+
+        .btn-action-primary {
+            display: block;
+            width: 100%;
+            background-color: var(--details-color);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-action-primary:hover {
+            background-color: #ea580c;
+        }
+
+        .btn-action-secondary {
+            display: block;
+            width: 100%;
+            background-color: var(--whatsapp-green);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-action-secondary:hover {
+            background-color: #1ebd56;
+        }
+
+        /* --- BLOG / INSTAGRAM SECTION --- */
+        .blog-section {
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .insta-card-wrapper {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 12px;
+            border: 1px solid #E5E7EB;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .insta-header {
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #F3F4F6;
+        }
+
+        .insta-user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .insta-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .insta-username {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1F2937;
+        }
+
+        .insta-followers {
+            font-size: 11px;
+            color: #6B7280;
+        }
+
+        .insta-view-btn {
+            background-color: #3B82F6;
+            color: #FFFFFF;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .insta-content-post {
+            background-color: #FAF6F0;
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .insta-post-title {
+            font-size: 16px;
+            color: #8C827A;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .insta-post-big {
+            font-size: 38px;
+            font-family: serif;
+            font-style: italic;
+            font-weight: 700;
+            color: #B58463;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .insta-post-sub {
+            font-size: 20px;
+            color: #8C827A;
+            margin-bottom: 15px;
+        }
+
+        .insta-post-accent {
+            font-size: 34px;
+            font-family: serif;
+            font-style: italic;
+            font-weight: 700;
+            color: #B58463;
+            margin-bottom: 30px;
+        }
+
+        .insta-handle-watermark {
+            font-size: 12px;
+            color: #B58463;
+            font-weight: 600;
+        }
+
+        .insta-footer {
+            padding: 12px 16px;
+            border-top: 1px solid #F3F4F6;
+        }
+
+        .insta-actions {
+            display: flex;
+            gap: 16px;
+            font-size: 20px;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        .insta-actions i:last-child {
+            margin-left: auto;
+        }
+
+        .insta-likes {
+            font-size: 13px;
+            font-weight: 600;
+            color: #1F2937;
+        }
+
+        /* --- LOCALIZAÇÃO SECTION --- */
+        .location-section {
+            padding: 30px 0;
+        }
+
+        .map-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            margin-top: 16px;
+        }
+
+        .map-card-header {
+            padding: 14px 18px;
+            background: #FAFAFA;
+            border-bottom: 1px solid #E5E7EB;
+            font-weight: 600;
+            color: #1F2937;
+            font-size: 14px;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 320px;
+            border: 0;
+        }
+
+        /* --- CONTATO & FOOTER --- */
+        .contact-box {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            font-size: 14px;
+        }
+
+        .contact-box strong {
+            color: var(--title-txt-color);
+        }
+
+        .contact-box a {
+            color: var(--details-color);
+            text-decoration: none;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px 80px;
+            font-size: 12px;
+            color: #9CA3AF;
+        }
+
+        /* --- FLOATING WHATSAPP BUTTON --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: var(--whatsapp-green);
+            color: #FFFFFF;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            z-index: 9999;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR TOPO -->
+    <header class="navbar-top">
+        <a href="#dados" class="brand-btn">Ana Felgueiras</a>
+        <button class="hamburger-btn" onclick="toggleMenu()" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-menu" id="navMenu">
+            <a href="#dados" onclick="toggleMenu()">Início</a>
+            <a href="#como-posso-ajudar" onclick="toggleMenu()">Como Posso Ajudar</a>
+            <a href="#gestalt-terapia" onclick="toggleMenu()">Gestalt-terapia</a>
+            <a href="#agendamento" onclick="toggleMenu()">Agendamento Online</a>
+            <a href="#localizacao" onclick="toggleMenu()">Localização</a>
+            <a href="#blog" onclick="toggleMenu()">Blog</a>
+            <a href="#contato" onclick="toggleMenu()">Contato</a>
+        </nav>
+    </header>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <main class="container" id="dados">
+
+        <!-- FOTO PRINCIPAL -->
+        <div class="hero-photo-wrapper">
+            <img src="./img/ana_felgueiras_foto.jpg" alt="Psicóloga Ana Felgueiras" class="hero-photo">
+        </div>
+
+        <!-- CABEÇALHO DA PSICÓLOGA -->
+        <div class="doctor-header">
+            <h1 class="doctor-name">Ana Felgueiras</h1>
+            <div class="doctor-specialty">PSICOLOGIA</div>
+            <div class="doctor-subspecialty">Psicologia</div>
+            <h2 class="welcome-title">Olá, seja bem-vindo(a)!</h2>
+        </div>
+
+        <!-- BIOGRAFIA E APRESENTAÇÃO -->
+        <p class="bio-text">
+            Sou psicóloga Ana Felgueiras (CRP 05/75804) e trabalho com adolescentes e adultos por meio da Gestalt-terapia, uma abordagem que valoriza a consciência, a autenticidade e a construção de uma relação mais saudável consigo mesmo e com o mundo.
+        </p>
+
+        <p class="bio-text">
+            Acredito que cada pessoa possui uma história única e que o processo terapêutico é um espaço de acolhimento, escuta e descoberta. Meu objetivo é ajudá-lo(a) a compreender melhor suas emoções, necessidades e padrões de comportamento, favorecendo escolhas mais conscientes e alinhadas com quem você é.
+        </p>
+
+        <!-- COMO POSSO AJUDAR -->
+        <h3 class="section-title" id="como-posso-ajudar">COMO POSSO AJUDAR?</h3>
+        <p class="bio-text">Como psicóloga posso auxiliar em questões como:</p>
+        <ul class="help-list">
+            <li>Ansiedade e estresse</li>
+            <li>Perdas e Luto</li>
+            <li>Autoconhecimento</li>
+            <li>Baixa autoestima</li>
+            <li>Dificuldades nos relacionamentos</li>
+            <li>Conflitos familiares</li>
+            <li>Inseguranças e autocobrança</li>
+            <li>Desenvolvimento emocional na adolescência</li>
+            <li>Momentos de transição e tomada de decisões</li>
+        </ul>
+
+        <!-- GESTALT-TERAPIA -->
+        <h3 class="section-title" id="gestalt-terapia">O QUE É A GESTALT-TERAPIA?</h3>
+        <p class="bio-text">
+            A Gestalt-terapia convida você a olhar para sua experiência de forma mais consciente, compreendendo como pensa, sente e se relaciona no momento presente.
+        </p>
+        <p class="bio-text">
+            Mais do que buscar respostas prontas, trabalhamos juntos para ampliar sua percepção sobre si mesmo, fortalecendo recursos internos para lidar com desafios e construir relações mais saudáveis.
+        </p>
+
+        <!-- PARA ADOLESCENTES -->
+        <h3 class="section-title">PARA ADOLESCENTES</h3>
+        <p class="bio-text">
+            A adolescência é uma fase de descobertas, mudanças e desafios. A terapia oferece um espaço seguro para que o adolescente possa expressar seus sentimentos, desenvolver autonomia, fortalecer sua autoestima e aprender novas formas de lidar com suas emoções.
+        </p>
+
+        <!-- PARA ADULTOS -->
+        <h3 class="section-title">PARA ADULTOS</h3>
+        <p class="bio-text">
+            A vida adulta traz responsabilidades, mudanças e diferentes demandas emocionais. A psicoterapia pode ser um caminho para compreender conflitos, enfrentar dificuldades e desenvolver uma relação mais equilibrada consigo mesmo.
+        </p>
+
+        <!-- VAMOS CONVERSAR -->
+        <h3 class="section-title">VAMOS CONVERSAR?</h3>
+        <p class="bio-text">
+            Buscar ajuda psicológica é um ato de cuidado e coragem.
+        </p>
+        <p class="bio-text">
+            Se você deseja iniciar seu processo terapêutico, ficarei feliz em caminhar ao seu lado nessa jornada de autoconhecimento e transformação.
+        </p>
+
+        <!-- AGENDAMENTO ONLINE -->
+        <div class="accent-divider"></div>
+        <h2 class="section-heading-center" id="agendamento">Agendamento Online</h2>
+
+        <div class="agendamento-section">
+            <div class="booking-card">
+                <div class="booking-card-header">
+                    <span class="tab-item active">Dados de atendimento</span>
+                    <a href="#localizacao" class="tab-item link">Rio - Barra (BAR)</a>
+                </div>
+                <div class="booking-card-body">
+                    <div class="booking-info-item">
+                        <span class="booking-info-label">Política de retorno</span>
+                        <span class="booking-info-val">Sem retorno gratuito</span>
+                    </div>
+                    <div class="booking-info-item">
+                        <span class="booking-info-label">Idade do paciente</span>
+                        <span class="booking-info-val">A partir de 16 anos</span>
+                    </div>
+                    <div class="booking-info-item">
+                        <span class="booking-info-label">E-mail</span>
+                        <span class="booking-info-val">psi.anafelgueiras@gmail.com</span>
+                    </div>
+                    <div class="booking-info-item">
+                        <span class="booking-info-label">Orientações gerais</span>
+                        <span class="booking-info-val">
+                            Para que sua experiência seja ainda mais tranquila, sugiro que chegue com 10 minutos de antecedência e venha preparado para o seu atendimento. A sala de espera é pensada com carinho: você encontrará um ambiente acolhedor com café disponível, Wi-Fi gratuito e um honest market com opções variadas. Há estacionamento com vallet no prédio. Até breve!
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORMULÁRIO INTERATIVO DE AGENDAMENTO -->
+            <form onsubmit="handleAgendamento(event)">
+                <div class="form-group-custom">
+                    <label for="unidadeSelect">Unidade de atendimento</label>
+                    <select id="unidadeSelect" class="form-control-custom">
+                        <option value="Rio - Barra (BAR)">Rio - Barra (BAR) — Av. João Cabral de Mello Neto, 850</option>
+                        <option value="Atendimento Online">Atendimento Online (Vídeo-chamada)</option>
+                    </select>
+                </div>
+
+                <div class="form-group-custom">
+                    <label for="tipoSelect">Tipo de atendimento</label>
+                    <select id="tipoSelect" class="form-control-custom">
+                        <option value="Presencial (Adolescentes e Adultos)">Presencial (Adolescentes e Adultos)</option>
+                        <option value="Online (Gestalt-terapia)">Online (Gestalt-terapia)</option>
+                    </select>
+                </div>
+
+                <div class="form-group-custom">
+                    <label for="pagtoSelect">Meio de pagamento</label>
+                    <select id="pagtoSelect" class="form-control-custom">
+                        <option value="Particular (Pix / Cartão)">Particular (Pix / Cartão)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-action-primary">
+                    <i class="fa-regular fa-calendar-check" style="margin-right: 8px;"></i> Agendar Consulta no OneLiv
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=5521987823931&text=Ol%C3%A1%2C%20Ana!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20voc%C3%AA." target="_blank" class="btn-action-secondary">
+                    <i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> Agendar Diretamente via WhatsApp
+                </a>
+            </form>
+        </div>
+
+        <!-- BLOG / INSTAGRAM -->
+        <div class="accent-divider"></div>
+        <h2 class="section-heading-center" id="blog">Blog</h2>
+        <div class="blog-section">
+            <h4 style="color: #2563EB; font-size: 18px; margin-bottom: 4px;">Postagem do Instagram</h4>
+            <div style="font-size: 13px; color: #6B7280; margin-bottom: 20px;">15 junho, 2026</div>
+
+            <div class="insta-card-wrapper">
+                <div class="insta-header">
+                    <div class="insta-user">
+                        <img src="./img/ana_felgueiras_foto.jpg" alt="Ana Felgueiras" class="insta-avatar">
+                        <div>
+                            <div class="insta-username">psi.anapaulafelgueiras</div>
+                            <div class="insta-followers">285 seguidores</div>
+                        </div>
+                    </div>
+                    <a href="https://www.instagram.com/psi.anapaulafelgueiras/" target="_blank" class="insta-view-btn">Ver perfil</a>
+                </div>
+                <div class="insta-content-post">
+                    <div class="insta-post-title">Frases para</div>
+                    <div class="insta-post-big">Impor</div>
+                    <div class="insta-post-sub">Limites de forma</div>
+                    <div class="insta-post-accent">leve e saudável</div>
+                    <div class="insta-handle-watermark">@psi.anafelgueiras</div>
+                </div>
+                <div class="insta-footer">
+                    <div class="insta-actions">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+                    <div class="insta-likes">32 curtidas</div>
+                    <a href="https://www.instagram.com/psi.anapaulafelgueiras/" target="_blank" style="font-size: 12px; color: #3B82F6; text-decoration: none; display: block; margin-top: 6px;">Ver mais no Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOCALIZAÇÃO -->
+        <div class="accent-divider"></div>
+        <h2 class="section-heading-center" id="localizacao">Localização</h2>
+        <p style="text-align: center; font-size: 14px; color: #6B7280; margin-bottom: 20px;">
+            Veja como chegar na unidade de atendimento mais próxima.
+        </p>
+
+        <div class="location-section">
+            <div class="map-card">
+                <div class="map-card-header">
+                    <i class="fa-solid fa-location-dot" style="color: var(--details-color); margin-right: 6px;"></i>
+                    Unidade Rio - Barra (BAR) — Livance Consultórios
+                </div>
+                <iframe 
+                    class="map-frame" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8277259161743!2d-43.36440782386445!3d-22.99335967919659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda207c08b76d%3A0x7d251bc89a466187!2sAv.%20Jo%C3%A3o%20Cabral%20de%20Mello%20Neto%2C%20850%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022775-057!5e0!3m2!1spt-BR!2sbr!4v1715000000000!5m2!1spt-BR!2sbr" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- CONTATO -->
+        <div class="accent-divider"></div>
+        <h2 class="section-heading-center" id="contato">Contato</h2>
+
+        <div class="contact-box">
+            <strong>Ana Felgueiras</strong> — Psicóloga Clínica (CRP 05/75804)<br><br>
+            <strong>Unidade Rio - Barra (BAR)</strong><br>
+            Av. João Cabral de Mello Neto, 850 — 10º Andar (Torre North, Bloco 1)<br>
+            Barra da Tijuca — Rio de Janeiro / RJ — CEP 22775-057<br><br>
+            <p><i class="fa-solid fa-phone" style="color: var(--details-color); margin-right: 8px;"></i> (21) 98782-3931</p>
+            <p><i class="fa-solid fa-envelope" style="color: var(--details-color); margin-right: 8px;"></i> <a href="mailto:psi.anafelgueiras@gmail.com">psi.anafelgueiras@gmail.com</a></p>
+            <p><i class="fa-brands fa-instagram" style="color: var(--details-color); margin-right: 8px;"></i> <a href="https://www.instagram.com/psi.anapaulafelgueiras/" target="_blank">@psi.anapaulafelgueiras</a></p>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Ana Felgueiras — Psicóloga Clínica | CRP 05/75804. Todos os direitos reservados.</p>
+        <p style="margin-top: 6px;">Atendimento presencial na Barra da Tijuca, RJ e Online para todo o Brasil.</p>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://api.whatsapp.com/send?phone=5521987823931&text=Ol%C3%A1%2C%20Ana!%20Gostaria%20de%20agendar%20um%20atendimento%20psicol%C3%B3gico%20com%20voc%C3%AA." 
+       class="whatsapp-float" 
+       target="_blank" 
+       aria-label="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SCRIPT DE INTERATIVIDADE -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        function handleAgendamento(e) {
+            e.preventDefault();
+            var unidade = document.getElementById('unidadeSelect').value;
+            var tipo = document.getElementById('tipoSelect').value;
+            var urlOneLiv = "https://oneliv.com.br/profissional/ana-paula-teixeira-felgueiras?utm_source=site-membro";
+            
+            // Abre o sistema de agendamento oficial
+            window.open(urlOneLiv, '_blank');
+        }
+    </script>
+</body>
+</html>
