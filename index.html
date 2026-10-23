@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ana Felgueiras - Psicóloga Clínica (CRP 05/75804) em Gestalt-terapia para adolescentes e adultos. Atendimento na Barra da Tijuca, RJ e Online.">
+    <meta name="description" content="Ana Felgueiras - Psicóloga Clínica (CRP 05/75804). Atendimento Psicológico 100% Online em Gestalt-terapia para adolescentes e adultos em todo o Brasil e exterior.">
     <meta name="author" content="Ana Felgueiras">
-    <title>Ana Felgueiras - Informações e Agendamento</title>
+    <title>Ana Felgueiras - Atendimento Psicológico Online</title>
 
     <!-- Google Fonts Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +27,7 @@
             --paragraph-txt-color: #3A3A3A;
             --card-bg: #FFFFFF;
             --whatsapp-green: #25D366;
+            --whatsapp-green-hover: #1ebd56;
         }
 
         * {
@@ -158,7 +159,25 @@
         .doctor-subspecialty {
             color: #78716C;
             font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .online-badge {
+            display: inline-block;
+            background-color: #FEF3C7;
+            color: #92400E;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid #FDE68A;
             margin-bottom: 18px;
+        }
+
+        .online-badge i {
+            color: #10B981;
+            margin-right: 5px;
+            font-size: 10px;
         }
 
         .welcome-title {
@@ -226,10 +245,10 @@
             margin-bottom: 24px;
         }
 
-        /* --- AGENDAMENTO SECTION --- */
+        /* --- AGENDAMENTO SECTION (100% ONLINE) --- */
         .agendamento-section {
             background-color: var(--secundary-color);
-            padding: 40px 20px;
+            padding: 36px 20px;
             margin-top: 40px;
             border-radius: 16px;
         }
@@ -244,23 +263,37 @@
 
         .booking-card-header {
             display: flex;
+            align-items: center;
+            padding: 14px 20px;
             border-bottom: 1px solid #E5E7EB;
+            background-color: #FAFAFA;
         }
 
         .tab-item {
-            padding: 14px 20px;
             font-size: 14px;
-            font-weight: 500;
-        }
-
-        .tab-item.active {
+            font-weight: 600;
             color: var(--paragraph-txt-color);
-            border-right: 1px solid #E5E7EB;
         }
 
-        .tab-item.link {
-            color: #2563EB;
+        .tab-badge {
             margin-left: auto;
+            background-color: #D1FAE5;
+            color: #065F46;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tab-badge span {
+            width: 8px;
+            height: 8px;
+            background-color: #10B981;
+            border-radius: 50%;
+            display: inline-block;
         }
 
         .booking-card-body {
@@ -283,65 +316,55 @@
             color: #4B5563;
         }
 
-        .form-group-custom {
-            margin-bottom: 18px;
-        }
-
-        .form-group-custom label {
-            display: block;
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 6px;
-            color: #374151;
-        }
-
-        .form-control-custom {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 14px;
-            border: 1px solid #D1D5DB;
-            border-radius: 8px;
-            background-color: #FFFFFF;
-            font-family: inherit;
-        }
-
-        .btn-action-primary {
-            display: block;
-            width: 100%;
-            background-color: var(--details-color);
-            color: #FFFFFF;
+        .cta-container {
+            margin-top: 24px;
             text-align: center;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: background 0.2s;
-            margin-top: 15px;
-            box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
         }
 
-        .btn-action-primary:hover {
-            background-color: #ea580c;
-        }
-
-        .btn-action-secondary {
-            display: block;
+        .btn-whatsapp-primary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
             width: 100%;
             background-color: var(--whatsapp-green);
             color: #FFFFFF;
-            text-align: center;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 15px;
+            padding: 16px 20px;
+            border-radius: 10px;
+            font-size: 16px;
             font-weight: 600;
             text-decoration: none;
-            transition: background 0.2s;
-            margin-top: 10px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
         }
 
-        .btn-action-secondary:hover {
-            background-color: #1ebd56;
+        .btn-whatsapp-primary:hover {
+            background-color: var(--whatsapp-green-hover);
+            transform: translateY(-1px);
+            color: #FFFFFF;
+        }
+
+        .btn-email-secondary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background-color: #FFFFFF;
+            color: var(--menu-txt-color);
+            border: 1px solid var(--details-color);
+            padding: 14px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            margin-top: 12px;
+        }
+
+        .btn-email-secondary:hover {
+            background-color: #FFF7ED;
+            color: var(--menu-txt-color);
         }
 
         /* --- BLOG / INSTAGRAM SECTION --- */
@@ -470,58 +493,60 @@
             color: #1F2937;
         }
 
-        /* --- LOCALIZAÇÃO SECTION --- */
-        .location-section {
-            padding: 30px 0;
-        }
-
-        .map-card {
-            background: #FFFFFF;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-            margin-top: 16px;
-        }
-
-        .map-card-header {
-            padding: 14px 18px;
-            background: #FAFAFA;
-            border-bottom: 1px solid #E5E7EB;
-            font-weight: 600;
-            color: #1F2937;
-            font-size: 14px;
-        }
-
-        .map-frame {
-            width: 100%;
-            height: 320px;
-            border: 0;
-        }
-
         /* --- CONTATO & FOOTER --- */
         .contact-box {
             background: #FFFFFF;
             border-radius: 12px;
-            padding: 24px;
+            padding: 28px 24px;
             margin-top: 24px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            font-size: 14px;
+            font-size: 15px;
+            text-align: center;
         }
 
         .contact-box strong {
             color: var(--title-txt-color);
+            font-size: 18px;
         }
 
-        .contact-box a {
-            color: var(--details-color);
+        .contact-channel-list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-channel-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            background-color: var(--primary-color);
+            border-radius: 8px;
             text-decoration: none;
+            color: var(--paragraph-txt-color);
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .contact-channel-item:hover {
+            background-color: #FEF3C7;
+        }
+
+        .contact-channel-item i {
+            color: var(--details-color);
+            font-size: 18px;
         }
 
         .footer {
             text-align: center;
-            padding: 30px 20px 80px;
+            padding: 30px 20px 90px;
             font-size: 12px;
-            color: #9CA3AF;
+            color: #78716C;
         }
 
         /* --- FLOATING WHATSAPP BUTTON --- */
@@ -531,14 +556,14 @@
             right: 24px;
             background-color: var(--whatsapp-green);
             color: #FFFFFF;
-            width: 60px;
-            height: 60px;
+            width: 62px;
+            height: 62px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+            font-size: 34px;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
             z-index: 9999;
             text-decoration: none;
             transition: transform 0.2s, box-shadow 0.2s;
@@ -546,7 +571,7 @@
 
         .whatsapp-float:hover {
             transform: scale(1.08);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 6px 22px rgba(37, 211, 102, 0.65);
             color: #FFFFFF;
         }
     </style>
@@ -564,7 +589,6 @@
             <a href="#como-posso-ajudar" onclick="toggleMenu()">Como Posso Ajudar</a>
             <a href="#gestalt-terapia" onclick="toggleMenu()">Gestalt-terapia</a>
             <a href="#agendamento" onclick="toggleMenu()">Agendamento Online</a>
-            <a href="#localizacao" onclick="toggleMenu()">Localização</a>
             <a href="#blog" onclick="toggleMenu()">Blog</a>
             <a href="#contato" onclick="toggleMenu()">Contato</a>
         </nav>
@@ -582,7 +606,10 @@
         <div class="doctor-header">
             <h1 class="doctor-name">Ana Felgueiras</h1>
             <div class="doctor-specialty">PSICOLOGIA</div>
-            <div class="doctor-subspecialty">Psicologia</div>
+            <div class="doctor-subspecialty">Psicologia Clínica</div>
+            <div class="online-badge">
+                <i class="fa-solid fa-circle"></i> Atendimento 100% Online
+            </div>
             <h2 class="welcome-title">Olá, seja bem-vindo(a)!</h2>
         </div>
 
@@ -637,7 +664,7 @@
             Buscar ajuda psicológica é um ato de cuidado e coragem.
         </p>
         <p class="bio-text">
-            Se você deseja iniciar seu processo terapêutico, ficarei feliz em caminhar ao seu lado nessa jornada de autoconhecimento e transformação.
+            Se você deseja iniciar seu processo terapêutico, ficarei feliz em caminhar ao seu lado nessa jornada de autoconhecimento e transformação através de sessões online acolhedoras e no conforto do seu espaço.
         </p>
 
         <!-- AGENDAMENTO ONLINE -->
@@ -647,63 +674,46 @@
         <div class="agendamento-section">
             <div class="booking-card">
                 <div class="booking-card-header">
-                    <span class="tab-item active">Dados de atendimento</span>
-                    <a href="#localizacao" class="tab-item link">Rio - Barra (BAR)</a>
+                    <span class="tab-item">Informações do Atendimento</span>
+                    <span class="tab-badge"><span></span> 100% Online</span>
                 </div>
                 <div class="booking-card-body">
                     <div class="booking-info-item">
-                        <span class="booking-info-label">Política de retorno</span>
-                        <span class="booking-info-val">Sem retorno gratuito</span>
+                        <span class="booking-info-label">Modalidade de Atendimento</span>
+                        <span class="booking-info-val">Atendimento Clínico 100% Online (via videochamada segura e confidencial)</span>
                     </div>
                     <div class="booking-info-item">
-                        <span class="booking-info-label">Idade do paciente</span>
-                        <span class="booking-info-val">A partir de 16 anos</span>
+                        <span class="booking-info-label">Público-alvo</span>
+                        <span class="booking-info-val">Adolescentes (a partir de 16 anos) e Adultos</span>
                     </div>
                     <div class="booking-info-item">
-                        <span class="booking-info-label">E-mail</span>
-                        <span class="booking-info-val">psi.anafelgueiras@gmail.com</span>
+                        <span class="booking-info-label">Política de sessões</span>
+                        <span class="booking-info-val">Sessões individuais semanais ou quinzenais pré-agendadas</span>
                     </div>
                     <div class="booking-info-item">
-                        <span class="booking-info-label">Orientações gerais</span>
+                        <span class="booking-info-label">Orientações para a sua sessão</span>
                         <span class="booking-info-val">
-                            Para que sua experiência seja ainda mais tranquila, sugiro que chegue com 10 minutos de antecedência e venha preparado para o seu atendimento. A sala de espera é pensada com carinho: você encontrará um ambiente acolhedor com café disponível, Wi-Fi gratuito e um honest market com opções variadas. Há estacionamento com vallet no prédio. Até breve!
+                            Para o melhor aproveitamento do seu atendimento online, sugerimos que esteja em um local calmo, privativo e com boa conexão de internet. O uso de fones de ouvido é altamente recomendado para garantir total sigilo, privacidade e conforto durante o seu processo terapêutico.
                         </span>
                     </div>
                 </div>
             </div>
 
-            <!-- FORMULÁRIO INTERATIVO DE AGENDAMENTO -->
-            <form onsubmit="handleAgendamento(event)">
-                <div class="form-group-custom">
-                    <label for="unidadeSelect">Unidade de atendimento</label>
-                    <select id="unidadeSelect" class="form-control-custom">
-                        <option value="Rio - Barra (BAR)">Rio - Barra (BAR) — Av. João Cabral de Mello Neto, 850</option>
-                        <option value="Atendimento Online">Atendimento Online (Vídeo-chamada)</option>
-                    </select>
-                </div>
-
-                <div class="form-group-custom">
-                    <label for="tipoSelect">Tipo de atendimento</label>
-                    <select id="tipoSelect" class="form-control-custom">
-                        <option value="Presencial (Adolescentes e Adultos)">Presencial (Adolescentes e Adultos)</option>
-                        <option value="Online (Gestalt-terapia)">Online (Gestalt-terapia)</option>
-                    </select>
-                </div>
-
-                <div class="form-group-custom">
-                    <label for="pagtoSelect">Meio de pagamento</label>
-                    <select id="pagtoSelect" class="form-control-custom">
-                        <option value="Particular (Pix / Cartão)">Particular (Pix / Cartão)</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn-action-primary">
-                    <i class="fa-regular fa-calendar-check" style="margin-right: 8px;"></i> Agendar Consulta no OneLiv
-                </button>
-                <a href="https://api.whatsapp.com/send?phone=5521987823931&text=Ol%C3%A1%2C%20Ana!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20voc%C3%AA." target="_blank" class="btn-action-secondary">
-                    <i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> Agendar Diretamente via WhatsApp
+            <!-- CHAMADA DIRETA PARA O WHATSAPP E E-MAIL -->
+            <div class="cta-container">
+                <a href="https://api.whatsapp.com/send?phone=5521987823931&text=Ol%C3%A1%2C%20Ana!%20Gostaria%20de%20agendar%20um%20atendimento%20psicol%C3%B3gico%20online." 
+                   target="_blank" 
+                   class="btn-whatsapp-primary">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 22px;"></i>
+                    Agendar Sessão pelo WhatsApp
                 </a>
-            </form>
+
+                <a href="mailto:psi.anafelgueiras@gmail.com?subject=Agendamento%20de%20Consulta%20Online&body=Ol%C3%A1%2C%20Ana!%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20sess%C3%B5es%20online." 
+                   class="btn-email-secondary">
+                    <i class="fa-solid fa-envelope" style="font-size: 16px;"></i>
+                    Ou envie um e-mail: psi.anafelgueiras@gmail.com
+                </a>
+            </div>
         </div>
 
         <!-- BLOG / INSTAGRAM -->
@@ -744,40 +754,35 @@
             </div>
         </div>
 
-        <!-- LOCALIZAÇÃO -->
-        <div class="accent-divider"></div>
-        <h2 class="section-heading-center" id="localizacao">Localização</h2>
-        <p style="text-align: center; font-size: 14px; color: #6B7280; margin-bottom: 20px;">
-            Veja como chegar na unidade de atendimento mais próxima.
-        </p>
-
-        <div class="location-section">
-            <div class="map-card">
-                <div class="map-card-header">
-                    <i class="fa-solid fa-location-dot" style="color: var(--details-color); margin-right: 6px;"></i>
-                    Unidade Rio - Barra (BAR) — Livance Consultórios
-                </div>
-                <iframe 
-                    class="map-frame" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8277259161743!2d-43.36440782386445!3d-22.99335967919659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda207c08b76d%3A0x7d251bc89a466187!2sAv.%20Jo%C3%A3o%20Cabral%20de%20Mello%20Neto%2C%20850%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022775-057!5e0!3m2!1spt-BR!2sbr!4v1715000000000!5m2!1spt-BR!2sbr" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
-
         <!-- CONTATO -->
         <div class="accent-divider"></div>
-        <h2 class="section-heading-center" id="contato">Contato</h2>
+        <h2 class="section-heading-center" id="contato">Canais de Atendimento</h2>
 
         <div class="contact-box">
-            <strong>Ana Felgueiras</strong> — Psicóloga Clínica (CRP 05/75804)<br><br>
-            <strong>Unidade Rio - Barra (BAR)</strong><br>
-            Av. João Cabral de Mello Neto, 850 — 10º Andar (Torre North, Bloco 1)<br>
-            Barra da Tijuca — Rio de Janeiro / RJ — CEP 22775-057<br><br>
-            <p><i class="fa-solid fa-phone" style="color: var(--details-color); margin-right: 8px;"></i> (21) 98782-3931</p>
-            <p><i class="fa-solid fa-envelope" style="color: var(--details-color); margin-right: 8px;"></i> <a href="mailto:psi.anafelgueiras@gmail.com">psi.anafelgueiras@gmail.com</a></p>
-            <p><i class="fa-brands fa-instagram" style="color: var(--details-color); margin-right: 8px;"></i> <a href="https://www.instagram.com/psi.anapaulafelgueiras/" target="_blank">@psi.anapaulafelgueiras</a></p>
+            <strong>Ana Felgueiras</strong><br>
+            <span style="color: #78716C; font-size: 14px;">Psicóloga Clínica | CRP 05/75804</span><br>
+            <span style="display: inline-block; margin-top: 6px; font-weight: 600; color: #059669; font-size: 13px;">
+                <i class="fa-solid fa-video" style="margin-right: 4px;"></i> Consultório Virtual 100% Online
+            </span>
+
+            <div class="contact-channel-list">
+                <a href="https://api.whatsapp.com/send?phone=5521987823931&text=Ol%C3%A1%2C%20Ana!%20Gostaria%20de%20agendar%20um%20atendimento%20psicol%C3%B3gico%20online." 
+                   target="_blank" 
+                   class="contact-channel-item">
+                    <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
+                    WhatsApp: (21) 98782-3931
+                </a>
+
+                <a href="mailto:psi.anafelgueiras@gmail.com" class="contact-channel-item">
+                    <i class="fa-solid fa-envelope" style="color: var(--details-color);"></i>
+                    E-mail: psi.anafelgueiras@gmail.com
+                </a>
+
+                <a href="https://www.instagram.com/psi.anapaulafelgueiras/" target="_blank" class="contact-channel-item">
+                    <i class="fa-brands fa-instagram" style="color: #E1306C;"></i>
+                    Instagram: @psi.anapaulafelgueiras
+                </a>
+            </div>
         </div>
 
     </main>
@@ -785,11 +790,11 @@
     <!-- FOOTER -->
     <footer class="footer">
         <p>&copy; 2026 Ana Felgueiras — Psicóloga Clínica | CRP 05/75804. Todos os direitos reservados.</p>
-        <p style="margin-top: 6px;">Atendimento presencial na Barra da Tijuca, RJ e Online para todo o Brasil.</p>
+        <p style="margin-top: 6px;">Atendimento Psicológico 100% Online para todo o Brasil e exterior.</p>
     </footer>
 
     <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-    <a href="https://api.whatsapp.com/send?phone=5521987823931&text=Ol%C3%A1%2C%20Ana!%20Gostaria%20de%20agendar%20um%20atendimento%20psicol%C3%B3gico%20com%20voc%C3%AA." 
+    <a href="https://api.whatsapp.com/send?phone=5521987823931&text=Ol%C3%A1%2C%20Ana!%20Gostaria%20de%20agendar%20um%20atendimento%20psicol%C3%B3gico%20online." 
        class="whatsapp-float" 
        target="_blank" 
        aria-label="Falar no WhatsApp">
@@ -801,16 +806,6 @@
         function toggleMenu() {
             var menu = document.getElementById('navMenu');
             menu.classList.toggle('active');
-        }
-
-        function handleAgendamento(e) {
-            e.preventDefault();
-            var unidade = document.getElementById('unidadeSelect').value;
-            var tipo = document.getElementById('tipoSelect').value;
-            var urlOneLiv = "https://oneliv.com.br/profissional/ana-paula-teixeira-felgueiras?utm_source=site-membro";
-            
-            // Abre o sistema de agendamento oficial
-            window.open(urlOneLiv, '_blank');
         }
     </script>
 </body>
